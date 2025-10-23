@@ -1,4 +1,4 @@
-# 🧮 CLI Calculator (Go) - **Beginner Level**
+# 🧮 CLI Calculator (Go)
 
 A simple command-line calculator demonstrating fundamental Go concepts like function design, error handling, and CLI argument parsing. Perfect for learning Go basics and mathematical operations.
 
@@ -52,5 +52,6 @@ This project demonstrates:
 - **CLI Development:** Argument parsing and user interaction
 - **Mathematical Operations:** Implementing arithmetic with validation
 - **Code Organization:** Clean function structure and separation of concerns
+
 
 

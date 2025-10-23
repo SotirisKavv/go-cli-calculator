@@ -1,38 +1,51 @@
-# 🧮 CLI Calculator (Go)
+# CLI Calculator — Simple math operations in Go
 
-A simple command-line calculator demonstrating fundamental Go concepts like function design, error handling, and CLI argument parsing. Perfect for learning Go basics and mathematical operations.
+Beginner‑friendly CLI calculator demonstrating Go fundamentals: flag parsing, clean error handling, and arithmetic operations using only the standard library.
 
----
+- Operations: add, subtract, multiply, divide, exponent, modulus
+- CLI: flag‑based interface with built‑in help
+- Safety: input validation and division‑by‑zero protection
+- Dependencies: pure Go standard library
 
-## 🚀 What is this?
+Quick links:
+- Entrypoint: `calculator.go`
 
-A basic Go CLI tool that performs six mathematical operations with proper error handling. Showcases fundamental Go programming concepts and standard library usage.
 
----
+## What this project showcases
 
-## ✨ Features
+- Basic Go syntax: functions, variables, control structures
+- Flag parsing with `flag`
+- Error handling via `error` returns and validation
+- Math helpers using `math.Pow` and simple modulus logic
+- Switch‑driven operation routing
 
-- **Six Mathematical Operations:** Add, subtract, multiply, divide, exponent, modulus
-- **Error Handling:** Division by zero protection and input validation
-- **CLI Interface:** Flag-based argument parsing with help system
-- **Zero Dependencies:** Pure Go standard library implementation
 
----
+## High‑level flow
 
-## � Go Skills Demonstrated
+Components:
+- CLI flags: `-op`, `-a`, `-b`
+- Dispatcher: routes operation via `switch`
+- Compute: performs calculation with validation
+- Output: prints formatted result or error
 
-- **Basic Syntax:** Functions, variables, control structures
-- **Flag Package:** Command-line argument parsing
-- **Error Handling:** `error` returns and validation
-- **Math Package:** `math.Pow`, `math.Mod` functions
-- **Switch Statements:** Operation routing logic
-- **Standard Library:** `fmt`, `os`, `flag` packages
+Flow:
+1) Parse flags and validate inputs
+2) Dispatch to the appropriate math operation
+3) Print result with fixed precision or exit with an error message
 
----
 
-## 🛠️ Usage
+## Design tactics
 
-```sh
+- Minimal, readable functions per operation
+- Centralized validation for unsafe cases (e.g., divide by zero)
+- Standard library only: `flag`, `fmt`, `os`, `math`
+
+
+## Run locally
+
+Prereqs: Go 1.20+
+
+```powershell
 # Basic operations
 go run calculator.go -op add -a 10.5 -b 3.2        # Result: 13.7000
 go run calculator.go -op divide -a 20 -b 4          # Result: 5.0000
@@ -43,15 +56,20 @@ go run calculator.go -op divide -a 10 -b 0          # Error: Division by zero
 go run calculator.go -h                             # Show help
 ```
 
----
 
-## 🎯 Learning Objectives
+## Folder map
 
-This project demonstrates:
-- **Go Fundamentals:** Basic syntax, functions, and error handling
-- **CLI Development:** Argument parsing and user interaction
-- **Mathematical Operations:** Implementing arithmetic with validation
-- **Code Organization:** Clean function structure and separation of concerns
+- `calculator.go`: CLI flags, dispatcher, and math operations
 
+
+## Next steps (ideas)
+
+- Add integer‑only mode and big number support
+- Add interactive REPL mode
+
+
+## Author
+
+IAmSotiris
 
 
